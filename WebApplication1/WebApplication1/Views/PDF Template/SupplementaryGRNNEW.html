@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <table style='border-collapse:collapse;width:100%; font-size:10px;' cellpadding='4'>
+        <tr>
+            <td colspan='7'> <img style='width:200px;' src='https://hyperpuredev.blob.core.windows.net/webdata/hyperpurelogo.png' alt='zomato' /> </td>
+            <td colspan='3' style='text-align: right;color: rgb(128,128,128);font-size: 10px;font-weight: bold;' valign='bottom'>
+                <span>www.hyperpure.com</span>
+                <br /><span>help@hyperpure.com</span>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br />
+                <br />
+            </td>
+        </tr>
+        <tr>
+            <td colspan='10' align='center' valign='middle' style='border:1px solid;'><strong>SUPPLEMENTARY GOODS RECEIVED NOTE</strong></td>
+        </tr>
+        <tr>
+            <td rowspan='3' colspan='5' style='border-width:0px 1px 1px 1px;border-style:solid;' valign='top'>
+                <table width='100%' style='font-size:10px;' cellpadding='2' cellspacing='0'>
+                    <tr>
+                        <td colspan='2'>Bill/Shipped From :</td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'><strong>ZOMATO INTERNET PRIVATE LIMITED</strong></td>
+                    </tr>
+                    <tr>
+                        <td style='width:20%;' valign='top'>Shipping Address :</td>
+                        <td><span>GF 12A, 94 Meghdoot ,Nehru Place, New Delhi 110019</span></td>
+                    </tr>
+                    <tr>
+                        <td style='width:20%;'>GSTIN :</td>
+                        <td>@Model.Gstin</td>
+                    </tr>
+                </table>
+            </td>
+            <td colspan='3' style='border-width:0 1px 1px 0;border-style:solid' valign='top'>
+                <div>
+                    Purchase Order No :
+                    <br /><span><strong>@Model.PurchaseOrderNumber</strong></span>
+                </div>
+            </td>
+            <td colspan='2' style='border-width:0 1px 1px 0;border-style:solid' valign='top'>
+                <div>
+                    Purchase Order Date :
+                    <br /><span><strong>@Model.PurchaseOrderDate</strong></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='3' style='border-width:0 1px 1px 0;border-style:solid' valign='top'>
+                <div>
+                    GRN ID :
+                    <br /><strong><span>G</span> <span>@Model.GRNNumber</span></strong>
+                </div>
+            </td>
+            <td colspan='2' style='border-width:0 1px 1px 0;border-style:solid' valign='top'>
+                <div>
+                    Supplier Bill Number :
+                    <br /><span><strong>@Model.SupplierBillNumber</strong></span>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='3' style='border-width:0 1px 1px 0;border-style:solid;'>
+                E-way Bill No. :
+                <br /><span><br /><br /></span>
+            </td>
+            <td colspan='2' style='border-width:0 1px 1px 0;border-style:solid;'>
+                E-way Bill Date :
+                <br /><span><br /><br /></span>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='5' style='padding-bottom: 15px;border-width:0 1px 1px 1px;border-style:solid;' valign='top'>
+                <table width='100%' style='font-size:10px;' cellpadding='2' cellspacing='0'>
+                    <tr>
+                        <td colspan='2'>Bill/Ship To :</td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'><strong>@Model.SellerName</strong></td>
+                    </tr>
+                    <tr>
+                        <td valign='top' width='20%'> Billing Address : </td>
+                        <td width='80%' valing='top'> @Model.SellerAddress </td>
+                    </tr>
+                </table>
+            </td>
+            <td colspan='5' valign='top' style='border-width:0 1px 1px 0;border-style:solid;'>
+                <table width='100%' cellpadding='2' cellspacing='0' style='font-size:10px;'>
+                    <tr>
+                        <td colspan='2'>Suppliers Details :</td>
+                    </tr>
+                    <tr>
+                        <td colspan='2'><strong>@Model.WarehouseName</strong></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr cellpadding='0' cellspacing='0'>
+            <td style='border-width:0px 1px;border-style:solid;padding:0;' colspan='10' cellpadding='0' cellspacing='0'>
+                <table cellpadding='4' cellspacing='0' width='100%' style='font-size:10px;'>
+                    <tr>
+                        <td style='width: 10%;text-align: center;border-width:0 1px 1px 0;border-style:solid;'><strong>SR No</strong></td>
+                        <td style='width:30%;text-align: center;border-width:0 1px 1px 0px;border-style:solid;'><strong>Product Name</strong></td>
+                        <td style='width: 8%;text-align: center;border-width:0 1px 1px 0px;border-style:solid;'><strong>Qty. Ord.</strong></td>
+                        <td style='width: 8%;text-align: center;border-width:0 1px 1px 0px;border-style:solid;'><strong>Price Per Unit</strong></td>
+                        <td style='width: 8%;text-align: center;border-width:0 1px 1px 0px;border-style:solid;'><strong>UoM</strong></td>
+                        <td style='width: 8%;text-align: center;border-width:0 1px 1px 0px;border-style:solid;'><strong>GST Rate</strong></td>
+                        <td style='width: 8%;text-align: center;border-width:0 1px 1px 0px;border-style:solid;'><strong>Total Tax Amount</strong></td>
+                        <td style='width: 10%;text-align: center;border-width:0 0 1px 0px;border-style:solid;'><strong>Amount</strong></td>
+                    </tr>@foreach (var orderDetail in @Model.ProductDetails){
+                    <tr>
+                        <td style='border-width:0 1px 0 0px;border-style:solid;text-align:center;'>@orderDetail.SrNo</td>
+                        <td style='border-right:1px solid'>@orderDetail.ProductName</td>
+                        <td style='border-right:1px solid;text-align: center;'>@orderDetail.Quantity</td>
+                        <td style='border-right:1px solid;text-align: right;'>@orderDetail.PricePerUnit</td>
+                        <td style='border-right:1px solid;text-align: center;'>@orderDetail.Unit</td>
+                        <td style='border-right:1px solid;text-align: center;'>@orderDetail.GstRate<span>%</span></td>
+                        <td style='border-right:1px solid;text-align: right;'>@orderDetail.TotalTaxAmount</td>
+                        <td style='text-align: right;'>@orderDetail.ProductPrice</td>
+                    </tr>}
+                    <tr>
+                        <td style='border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='border-width:1px 1px 0 0;border-style:solid;text-align: right;'>Total</td>
+                        <td style='border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='border-width:1px 0 0 0;border-style:solid;text-align: right;'><strong><span>&#x20B9;</span>@Model.GrandTotalAmount</strong></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan='7' align='left' style='border-width:1px 0px 1px 1px;border-style:solid;'>
+                <span>Amount Chargeable (in words)</span>
+                <br /> <strong><span>INR </span>@Model.TotalAmountInWords<span> Only</span></strong>
+            </td>
+            <td colspan='3' align='right' valign='top' style='border-width:1px 1px 1px 0px;border-style:solid;'><em>E. & O.E</em></td>
+        </tr>
+        <tr cellpadding='0' cellspacing='0'>
+            <td colspan='10' style='border-style:solid;border-width:0 1px 1px 1px;padding:0;' cellpadding='0' cellspacing='0'>
+                <table style='width:100%;border-collapse:collapse;font-size:10px;' cellpadding='4' cellspacing='0'>
+                    <tr>
+                        <th rowspan='2' style='width:9%;text-align: center;border-width:0 1px 1px 0;border-style:solid;'>SR No</th>
+                        <th rowspan='2' style='width:9%;text-align: center;border-width:0 1px 1px 0;border-style:solid;'>Taxable Value</th>
+                        <th colspan='2' style='width:18%;text-align: center;border-width:0 1px 1px 0;border-style:solid;'>IGST</th>
+                        <th colspan='2' style='width:18%;text-align: center;border-width:0 1px 1px 0;border-style:solid;'>CESS</th>
+                        <th colspan='2' style='width:18%;text-align: center;border-width:0 1px 1px 0;border-style:solid;'>CGST</th>
+                        <th colspan='2' style='width:18%;text-align: center;border-width:0 1px 1px 0;border-style:solid;'>SGST</th>
+                        <th rowspan='2' style='width:10%;text-align: center;border-width:0 0 1px 0;border-style:solid;'>Total Tax Amount</th>
+                    </tr>
+                    <tr>
+                        <th style='text-align: center;border-width:0 1px 1px 0;border-style:solid;width:9%;'>Rate</th>
+                        <th style='text-align: center;border-width:0 1px 1px 0;border-style:solid;width:9%;'>Amount</th>
+                        <th style='text-align: center;border-width:0 1px 1px 0;border-style:solid;width:9%;'>Rate</th>
+                        <th style='text-align: center;border-width:0 1px 1px 0;border-style:solid;width:9%;'>Amount</th>
+                        <th style='text-align: center;border-width:0 1px 1px 0;border-style:solid;width:9%;'>Rate</th>
+                        <th style='text-align: center;border-width:0 1px 1px 0;border-style:solid;width:9%;'>Amount</th>
+                        <th style='text-align: center;border-width:0 1px 1px 0;border-style:solid;width:9%;'>Rate</th>
+                        <th style='text-align: center;border-width:0 1px 1px 0;border-style:solid;width:9%;'>Amount</th>
+                    </tr>@foreach (var order in @Model.ProductDetails){
+                    <tr>
+                        <td style='text-align: center;border-width:0 1px 0 0;border-style:solid;'>@order.SrNo</td>
+                        <td style='text-align: right;border-width:0 1px 0 0;border-style:solid;'>@order.TaxableAmount</td>
+                        <td style='text-align: center;border-width:0 1px 0 0;border-style:solid;'></td>
+                        <td style='text-align: right;border-width:0 1px 0 0;border-style:solid;'></td>
+                        <td style='text-align: center;border-width:0 1px 0 0;border-style:solid;'></td>
+                        <td style='text-align: right;border-width:0 1px 0 0;border-style:solid;'></td>
+                        <td style='text-align: center;border-width:0 1px 0 0;border-style:solid;'>@order.CgstRate<span>%</span></td>
+                        <td style='text-align: right;border-width:0 1px 0 0;border-style:solid;'>@order.CgstAmount</td>
+                        <td style='text-align: center;border-width:0 1px 0 0;border-style:solid;'>@order.SgstRate<span>%</span></td>
+                        <td style='text-align: right;border-width:0 1px 0 0;border-style:solid;'>@order.SgstAmount</td>
+                        <td style='text-align: right;'>@order.TotalTaxAmount</td>
+                    </tr>}
+                    <tr>
+                        <td style='text-align: center;border-width:1px 1px 0 0;border-style:solid;'>Total</td>
+                        <td style='text-align: right;border-width:1px 1px 0 0;border-style:solid;'><strong>@Model.TotalPrice</strong></td>
+                        <td style='text-align: center;border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='text-align: right;border-width:1px 1px 0 0;border-style:solid;'><strong></strong></td>
+                        <td style='text-align: center;border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='text-align: right;border-width:1px 1px 0 0;border-style:solid;'><strong></strong></td>
+                        <td style='text-align: center;border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='text-align: right;border-width:1px 1px 0 0;border-style:solid;'><strong>@Model.TotalCgstAmount</strong></td>
+                        <td style='text-align: center;border-width:1px 1px 0 0;border-style:solid;'></td>
+                        <td style='text-align: right;border-width:1px 1px 0 0;border-style:solid;'><strong>@Model.TotalSgstAmount</strong></td>
+                        <td style='text-align: right;border-width:1px 0 0 0;border-style:solid;'><strong>@Model.TotalProductTaxAmount</strong></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <br />
+                <br />
+            </td>
+        </tr>
+    </table>
+    <div width='100%'> <img style='width:660px;text-align:center;height:5px;' src='https://hyperpuredev.blob.core.windows.net/webdata/invoicefooterstrip.png' alt='zomato' /> </div>
+    <div colspan='10' align='center' style='font-size:10px;'>
+        <strong>ZOMATO INTERNET PRIVATE LIMITED</strong>
+        <br />
+        <label><strong>Registered Address:</strong></label> <span>GF 12A, 94 Meghdoot ,Nehru Place, New Delhi 110019</span>
+        <br />
+        <label><strong>CIN:</strong></label><span>U74900DL2015PTC286208</span>
+        <br />
+        <label><strong>PAN:</strong></label><span>AAACZ8867B124</span>
+    </div>
+
+</body>
+</html>

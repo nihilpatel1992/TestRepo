@@ -1,0 +1,146 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+
+        <table border='0' cellspacing='0' align='center' style='width:750px; margin:0 auto;'>
+            <tr>
+                <td colspan='2' valign='middle' align='center' style='font-size: 13px;font-weight: bold'> <img style='margin-top:5px;padding-bottom:4px;width:150px;' src='https://wotu.azureedge.net/web/wotu-l-logo.jpg' /> </td>
+            </tr>
+            <tr>
+                <td colspan='2' valign='middle' align='center' style='font-size: 13px;font-weight: bold;width:100%;padding-top:4px;padding-bottom:4px;'>WOTU TECHNOLOGIES PRIVATE LIMITED</td>
+            </tr>
+            <tr>
+                <td colspan='2' valign='middle' align='center' style='font-size: 20px;font-weight: bold; padding: 3px 0;margin-top:5px;margin-bottom:10px;padding-top:3px;padding-bottom:3px;'>Consolidated Invoice</td>
+            </tr>
+            <tr>
+                <td align='center' colspan='2'>
+                    <table width='100%' cellspacing='0' style='border-collapse: collapse;margin-bottom:30px;border:1px solid; margin-top: -3px;'>
+                        <tr>
+                            <td style='vertical-align: top; padding: 2px;width:50%;'>
+                                <table width='100%' style='font-size: 11px;'>
+                                    <tr>
+                                        <td style='font-weight: bold;padding-bottom:4px;width:15%;vertical-align:top;padding-left: 5px;'>Buyer:</td>
+                                        <td style='padding-bottom:4px;vertical-align:top;width:75%;'>
+                                            @Model.OrganizationName
+                                            <br />@Model.Address
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style='vertical-align: top; padding: 2px;width:50%;padding-top:10px;'>
+                                <table width='100%' style='font-size: 11px;'>
+                                    <tr>
+                                        <td style='font-weight: bold;padding-bottom:4px;width:25%;'>Invoice No.:</td>
+                                        <td style=''>@Model.InvoiceNumber</td>
+                                    </tr>
+                                    <tr>
+                                        <td style='font-weight: bold;padding-bottom:4px;width:25%;'>Invoice Date :</td>
+                                        <td style=''>@Model.DateOfInvoice</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr style='border-top:1px solid;'>
+                <td align='center' colspan='2'>
+                    <table width='100%' cellspacing='0' style='margin-bottom:60px;border-top:1px solid; font-size: 11px;'>
+                        <thead style='text-align: left;'>
+                            <tr>
+                                <th style='border-right: 1px solid; border-bottom: 1px solid; border-left:1px solid;padding: 5px;text-align:center;'>Sl. No.</th>
+                                <th style='border-right: 1px solid;width:75%; border-bottom: 1px solid;font-family:Verdana; padding: 5px;text-align:center;'>Particulars</th>
+                                <th style='border-right: 1px solid;width:10%; border-bottom: 1px solid;font-family:Verdana; padding: 5px;text-align:center;word-break:break-word;'>Amount(Rs.)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var detail in @Model.InvoiceDetails)
+                            {
+                                <tr>
+                                    <td style='padding: 5px;border-left:1px solid;border-bottom:1px solid;'>@detail.SrNo</td>
+                                    <td style='padding: 5px;width:75%;border-left:1px solid;border-bottom:1px solid;text-align:left;'>@detail.Particulars</td>
+                                    <td style='padding: 5px;width:20%;border-left:1px solid;border-bottom:1px solid;border-right:1px solid;text-align:right;word-break:break-word; '>@detail.Amount</td>
+                                </tr>}
+                            <tr>
+                                <td style='padding: 5px;border-left:1px solid;width:5% ;border-bottom:1px solid;'></td>
+                                <td style='text-align:right;padding: 5px;width:60%;border-left:1px solid;border-bottom:1px solid;'>Total</td>
+                                <td style='padding: 5px;border-left:1px solid;width:20% ;border-bottom:1px solid;text-align:right;border-right:1px solid;'>@Model.TotalInvoiceAmount</td>
+                            </tr>
+                            <tr>
+                                <td colspan='3' style='text-align:right;padding: 5px;border-left:1px solid;width:20% ;border-bottom:1px solid;text-align:left;border-right:1px solid;'>@Model.AmountInWords</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td align='center' colspan='2 '>
+                    <table width='100%' cellspacing='0 ' style='border-collapse: collapse;border:1px solid; margin-top: 40px; '>
+                        <tr>
+                            <td style='width: 50%;vertical-align:top;padding:5px 10px;f'>
+                                <table width='100%' style='font-size: 12px; '>
+                                    <tr>
+                                        <td style='font-weight: bold;width:16%; '>TIN:</td>
+                                        <td style=''>@Model.TINNumber</td>
+                                    </tr>
+                                    <tr>
+                                        <td style='font-weight: bold;width:16% '>PAN:</td>
+                                        <td>@Model.PANNumber</td>
+                                    </tr>
+                                    <tr>
+                                        <td style='font-weight: bold;width:16% '>FSSAI:</td>
+                                        <td>@Model.FSSAINumber</td>
+                                    </tr>
+                                    <tr>
+                                        <td style='font-weight: bold;width:16% '>GSTIN:</td>
+                                        <td>@Model.WotuGstin</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan='2 ' style='font-weight: bold;padding-top: 10px;'>Declaration :</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan='2 ' style=''>We declare that this invoice shows the actual price of the goods described and that all particulars are true and correct.</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td style='vertical-align: top; padding:5px 10px; '>
+                                <table width='100%' style='font-size: 12px; '>
+                                    <tr>
+                                        <td style='font-weight: bold; padding-bottom: 38px;'> Buyer's Signature :</td>
+                                    </tr>
+                                    <tr>
+                                        <td style='font-weight: bold;'>Place & Date :</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td colspan='2' style='background: #F2F2F2;'>
+                    <table style='font-size: 14px;border: 0;' cellspacing='0' align='center'>
+                        <tr>
+                            <td align='center' style='padding-top:12px;padding-bottom:12px;padding-right:6px;padding-left:6px;'>
+                                WOTU Technologies Pvt Ltd. #83, 4th cross, 16th C Main, 4th block, Koramangala, Bangalore- 560034
+                                <br /> www.wotu.in
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>

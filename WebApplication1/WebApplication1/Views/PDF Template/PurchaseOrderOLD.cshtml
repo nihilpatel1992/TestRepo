@@ -1,0 +1,147 @@
+﻿
+<table border='0' cellspacing='0' align='center' style='width:750px; margin:0 auto;'>
+    <tr>
+        <td colspan='2' valign='middle' align='center' style='font-size: 13px;font-weight: bold'>
+            <img style='margin-top:5px;padding-bottom:4px;width:150px;' src='http://wotudev.blob.core.windows.net/image/wotu-l-logo.jpg' />
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2' valign='middle' align='center' style='font-size: 13px;font-weight: bold;width:100%;padding-top:4px;padding-bottom:4px;'>WOTU TECHNOLOGIES PRIVATE LIMITED </td>
+    </tr>
+    <tr>
+        <td colspan='2' valign='middle' align='center' style='font-size: 20px;font-weight: bold; padding: 3px 0;margin-top:5px;margin-bottom:10px;padding-top:3px;padding-bottom:10px;'> PURCHASE ORDER</td>
+    </tr>
+    <tr>
+        <td align='center' colspan='2'>
+            <table width='100%' cellspacing='0' style='border-collapse: collapse;border:1px solid'>
+                <tr>
+                    <td style='vertical-align: top; padding: 10px;'>
+                        <table width='100%' style='font-size: 11px;'>
+                            <tr>
+                                <td style='font-weight: bold;padding-bottom:6px;width:34%;'>Seller Name :</td>
+                                <td style='padding-bottom:6px;'>@Model.VendorName</td>
+                            </tr>
+                            <tr>
+                                <td valign='top' style='font-weight: bold;padding-bottom:6px;width:34%;vertical-align:top;'>Billing Address:</td>
+                                <td style='padding-bottom:6px;'>
+                                    <span style='font-weight:bold;'>@Model.VendorName, </span>
+                                    <br /> @Model.VendorAddressLine1 @Model.VendorAddressLine2,
+                                    <br /> @Model.VendorLocality @Model.VendorCity, @Model.VendorState,
+                                    <br /> @Model.VendorZip ,
+                                    <br />
+                                    <span style='font-weight:bold;'>Ph:</span> @Model.VendorPhoneNumber
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='font-weight: bold;padding-bottom:6px;width:34%;'>Purchase Order Date: </td>
+                                <td style='padding-bottom:6px;'>@Model.OrderCreationDate</td>
+                            </tr>
+                            <tr>
+                                <td style='font-weight: bold;padding-bottom:6px;width:34%'>GSTIN:</td>
+                                <td style='padding-bottom:6px;'>@Model.GSTIN</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style='vertical-align: top; padding: 10px;'>
+                        <table width='100%' style='font-size: 11px;'>
+                            <tr>
+                                <td style='font-weight: bold;padding-bottom:6px;width:38%;'>Purchase Order Number:</td>
+                                <td style='padding-bottom:6px;'>@Model.PurchaseOrderNumber</td>
+                            </tr>
+                            <tr>
+                                <td valign='top' style='font-weight: bold;padding-bottom:6px;width:38%;vertical-align:top;'>Shipping Address :</td>
+                                <td style='padding-bottom:6px;'>
+                                    <span style='font-weight:bold;'>@Model.WarehouseName,</span>
+                                    <br />@Model.WarehouseAddressName @Model.AddressLine1 @Model.AddressLine2,
+                                    <br /> @Model.WarehouseAddressLocality, @Model.WarehouseCity, @Model.WarehouseState,
+                                    <br /> @Model.WarehouseZip,
+                                    <br />
+                                    <span style='font-weight:bold;'>Ph:</span> @Model.WarehousePhoneNumber
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style='font-weight: bold;padding-bottom:6px;width:38%'>Expected Delivery Date:</td>
+                                <td style='padding-bottom:6px;'>@Model.ExpectedDeliveryDate.ToShortDateString()</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td align='center' colspan='2'>
+            <table width='100%' cellspacing='0' style='margin-top: -4px; font-size: 11px;'>
+                <thead style='text-align: left;'>
+                    <tr>
+                        <th style='border-right: 1px solid; border-bottom: 1px solid; border-left:1px solid;padding: 5px;width:15%;text-align:center;'>SKU</th>
+                        <th style='border-right: 1px solid; border-bottom: 1px solid; padding: 5px;width:20%;text-align:center;'>Product Name</th>
+                        <th style='border-right: 1px solid;padding: 5px;width:10%;text-align:center;border-bottom: 1px solid;text-align:center;'>HSN Code</th>
+                        <th style='border-right: 1px solid; border-bottom: 1px solid; padding: 5px;width:20%;text-align:center;'>Store Locator</th>
+                        <th style='border-right: 1px solid; border-bottom: 1px solid; padding: 5px;width:18%;text-align:center;'>Qty. Ord.</th>
+                        <th style='border-right: 1px solid;width:9%; border-bottom: 1px solid; padding: 5px;width:18%;text-align:center;'>Price Per Unit</th>
+                        <th style='border-right: 1px solid; border-bottom: 1px solid; padding: 5px;width:12%;text-align:center;'>UOM</th>
+                        <th colspan='2' style='border-right: 1px solid; padding:0;width:30%;border-bottom: 1px solid;'>
+                            <table style='font-size: 11px;' cellspacing='0'>
+                                <tr>
+                                    <th colspan='2' style='border-bottom: 1px solid;padding:5px;text-align:center;'>CGST</th>
+                                </tr>
+                                <tr>
+                                    <th style='border-right: 1px solid;padding:5px;width:25%;'>Rate(%)</th>
+                                    <th style='padding:5px;width:25%;'>Amount</th>
+                                </tr>
+                            </table>
+                        </th>
+                        <th colspan='2' style='border-right: 1px solid;padding:0;width:30%;border-bottom: 1px solid;'>
+                            <table style='font-size: 11px;' cellspacing='0'>
+                                <tr>
+                                    <th colspan='2' style='border-bottom: 1px solid;padding:5px;text-align:center;'>SGST</th>
+                                </tr>
+                                <tr>
+                                    <th style='border-right: 1px solid;padding:5px;width:25%; '>Rate(%)</th>
+                                    <th style='padding:5px;width:25%;'>Amount</th>
+                                </tr>
+                            </table>
+                        </th>
+                        <th style='border-bottom: 1px solid; padding: 5px;border-right:1px solid;width:20%;text-align:center;'>Product Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var orderDetail in @Model.ProductDetails)
+                    {
+                        <tr>
+                            <td style='padding: 5px;border-left:1px solid;width:15%; border-right:1px solid;'>@orderDetail.Sku</td>
+                            <td style='padding: 5px;width:20%;border-right:1px solid;'>@orderDetail.ProductName</td>
+                            <td style='padding: 5px;width:10%;border-right:1px solid;'>@orderDetail.HSNCode</td>
+                            <td style='padding: 5px;width:20%;border-right:1px solid;'>@orderDetail.StoreLocator</td>
+                            <td style='padding: 5px;width:18%;border-right:1px solid;'>@orderDetail.OrderedQuantity</td>
+                            <td style='padding: 5px;width:18%;border-right:1px solid; '>@orderDetail.PricePerUnit</td>
+                            <td style='padding: 5px;width:12%;border-right:1px solid; '>@orderDetail.Unit</td>
+                            <td align='right' style='padding: 5px;width:7%;border-right:1px solid;'>@orderDetail.CGSTRate</td>
+                            <td align='right' style='padding: 5px;width:7%;border-right:1px solid;'>@orderDetail.CGSTAmount</td>
+                            <td align='right' style='padding: 5px;width:7%;border-right:1px solid;'>@orderDetail.SGSTRate</td>
+                            <td align='right' style='padding: 5px;width:7%;border-right:1px solid;'>@orderDetail.SGSTAmount</td>
+                            <td align='right' style='padding: 5px;width:20%; border-right:1px solid'>@orderDetail.ProductPrice</td>
+                        </tr>}
+                    <tr>
+                        <td colspan='11' style='padding: 5px;border-left:1px solid;width:20%;border-bottom:1px solid;border-top:1px solid;font-weight:bold; '>Total</td>
+                        <td align='right' style='padding: 5px;width:10%;border-bottom:1px solid;border-right:1px solid;border-top:1px solid;font-weight:bold; '>@Model.TotalAmount</td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            <table style='background: #F2F2F2;font-size: 14px;margin: 10px auto;border: 0;' cellspacing='0' align='center'>
+                <tr>
+                    <td align='center' style='padding-top:12px;padding-bottom:12px;padding-right:6px;padding-left:6px;'>
+                        WOTU Technologies Pvt Ltd. #83, 4th cross, 16th C Main, 4th block, Koramangala, Bangalore- 560034
+                        <br /> www.wotu.in
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+

@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td style='padding-bottom: 15px;'>Hi @Model.AccountUser.Name,</td>
+        </tr>
+        <tr>
+            <td style='padding-bottom: 10px;'>Welcome to HyperPure, Zomato’s restaurant supply platform.</td>
+        </tr>
+        <tr>
+            <td style='padding-bottom: 10px;'>HyperPure by Zomato will enable you to quickly and easily place orders for all kinds of restaurant supplies, from groceries to meats to packaging. </td>
+        </tr>
+        <tr>
+            <td style='padding-bottom: 10px;'>You can log in using your phone number. </td>
+        </tr>
+        <tr>
+            <td style='padding-bottom: 10px;'>Here’s a summary of your account details:</td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    @if(!string.IsNullOrWhiteSpace(@Model.OrganizationName)){
+                    <tr>
+                        <td><strong>Name :</strong></td>
+                        <td>@Model.OrganizationName</td>
+                    </tr>
+                    }
+                    @if(!string.IsNullOrWhiteSpace(@Model.PhoneNumber)){
+                    <tr>
+                        <td><strong>Phone Number :</strong></td>
+                        <td>@Model.PhoneNumber</td>
+                    </tr>
+                    }
+                    @if(!string.IsNullOrWhiteSpace(@Model.Email)){
+                    <tr>
+                        <td><strong>Email :</strong></td>
+                        <td>@Model.Email</td>
+                    </tr>}
+                    @if(!string.IsNullOrWhiteSpace(@Model.AlternateOrganizationName)){
+                    <tr>
+                        <td><strong>Restaurant Name :</strong></td>
+                        <td>@Model.AlternateOrganizationName</td>
+                    </tr>
+                    }
+                    @if(!string.IsNullOrWhiteSpace(@Model.Address.AddressLine)){
+                    <tr>
+                        <td><strong>Restaurant Address :</strong></td>
+                        <td>@Model.Address.AddressLine</td>
+                    </tr>
+                    }
+                    @if(!string.IsNullOrWhiteSpace(@Model.PanNumber)){
+                    <tr>
+                        <td><strong>PAN Number :</strong></td>
+                        <td>@Model.PanNumber</td>
+                    </tr>
+                    }
+                    @if(!string.IsNullOrWhiteSpace(@Model.GstIn)){
+                    <tr>
+                        <td style='padding-bottom: 10px;'><strong>GSTIN :</strong></td>
+                        <td>@Model.GstIn</td>
+                    </tr>
+                    }
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style='padding-bottom: 10px;'>Need to place an order? <a href='mailto:@Model.Website' style='color: #74C8BC'>Click here to begin shopping for supplies for your restaurant!</a></td>
+        </tr>
+        <tr>
+            <td style='padding-top: 5px;'>Regards,</td>
+        </tr>
+        <tr>
+            <td style='padding-bottom: 10px;'>Team HyperPure</td>
+        </tr>
+    </table>
+
+</body>
+</html>

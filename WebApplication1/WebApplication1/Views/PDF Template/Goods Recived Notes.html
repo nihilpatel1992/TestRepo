@@ -1,0 +1,273 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <table cellpadding="2" cellspacing="0" width="100%">
+        <tr>
+            <td>
+                <table cellpadding="2" cellspacing="0" width="100%">
+                    <tr>
+                        <td colspan="7">
+                            <img style='width:200px;' src='https://hyperpuredev.blob.core.windows.net/webdata/hyperpurelogo.png' alt='zomato' />
+                        </td>
+                        <td colspan='3' style='text-align: right;color: rgb(128,128,128);font-size: 10px;font-weight: bold;' valign='bottom'>
+                            zomato.com
+                            <br />info@zomato.com
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table cellpadding="2" cellspacing="0" style="font-size:10px" border="1" width="100%">
+                    <tr>
+                        <td align="center" valign="middle">
+                            <strong>GOODS RECEIVED NOTE</strong>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" rowspan="2">
+                            <table width='100%' style='font-size:10px;' cellpadding='2' cellspacing='0'>
+                                <tr>
+                                    <td colspan='2'><strong>@Model.WarehouseName</strong></td>
+                                </tr>
+                                <tr>
+                                    <td valign='top' width='20%'> Warehouse Address : </td>
+                                    <td width='80%'>
+                                        @Model.WarehouseAddressName,
+                                        <br /> @Model.AddressLine1 @Model.AddressLine2,
+                                        <br /> @Model.WarehouseAddressLocality, @Model.WarehouseCity,
+                                        <br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>State Name :</td>
+                                    <td><span> @Model.WarehouseState</span>-<span> @Model.WarehouseZip</span></td>
+                                </tr>
+                                <tr>
+                                    <td> Phone : </td>
+                                    <td> @Model.WarehousePhoneNumber </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td colspan="2">
+                            <div>
+                                Purchase Order Number : <br />
+                                <span>P0180529000001</span>
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <div>
+                                Purchase Order Date : <br />
+                                <span>9-Nov-2017</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div>
+                                Delivered On : <br />
+                                <span>5/29/2018</span>
+                            </div>
+                        </td>
+                        <td colspan="2">
+                            <div>
+                                Supplier Bill Number : <br />
+                                <span>123</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='6' valign='top'>
+                            <table width='100%' cellpadding='2' cellspacing='0'>
+                                <tr>
+                                    <td colspan='2'><strong>ZOMATO INTERNET PRIVATE LIMITED</strong></td>
+                                </tr>
+                                <tr>
+                                    <td valign='top'>Address :</td>
+                                    <td><span>GF 12A, 94 Meghdoot ,Nehru Place, New Delhi 110019</span></td>
+                                </tr>
+                                <tr>
+                                    <td valign='top'>CIN :</td>
+                                    <td>U74900DL2015PTC286208</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td colspan='4' valign='top'>
+                            <table width='100%' cellpadding='2' cellspacing='0'>
+                                <tr>
+                                    <td colspan='2'><strong>@Model.VendorName</strong></td>
+                                </tr>
+                                <tr>
+                                    <td style='width:20%;' valign='top'>Billing Address :</td>
+                                    <td>
+                                        @Model.VendorName, @Model.VendorAddressLine1 @Model.VendorAddressLine2,
+                                        <br /> @Model.VendorLocality @Model.VendorCity
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style='width:20%'> State Name : </td>
+                                    <td> <span>@Model.VendorState</span>-<span>@Model.VendorZip</span> </td>
+                                </tr>
+                                <tr>
+                                    <td style='width:20%'>Phone :</td>
+                                    <td> <span>@Model.VendorPhoneNumber </span> </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr cellpadding='0' cellspacing='0'>
+                        <td colspan="10">
+                            <table width='100%' cellpadding='2' cellspacing='0'>
+                                <tr>
+                                    <td align="center">SKU</td>
+                                    <td align="center">Product Name</td>
+                                    <td align="center">HSN Code</td>
+                                    <td align="center">Store Locator</td>
+                                    <td align="center">GST Rate</td>
+                                    <td align="center">Qty. Ord.</td>
+                                    <td align="center">Qty. Del.</td>
+                                    <td align="center">Price Per Unit</td>
+                                    <td align="center">UOM</td>
+                                    <td align="center">Product Price</td>
+                                </tr>
+                                <tr>
+                                    <td align="center">GRPA101</td>
+                                    <td align="left"><strong>Local Wonton Sheet 1kg</strong></td>
+                                    <td align="center">	1905</td>
+                                    <td align="center">AM-C-R9-L3-C1</td>
+                                    <td align="center">2<span>%</span></td>
+                                    <td align="center">2</td>
+                                    <td align="center">2</td>
+                                    <td align="right">5</td>
+                                    <td align="center">count</td>
+                                    <td align="right"><strong>11.8</strong></td>
+                                </tr>
+                                <tr>
+                                    <td align="center"></td>
+                                    <td align="left"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="right"></td>
+                                    <td align="center"></td>
+                                    <td align="right" style="border:2px 0 0 0 solid;">11.8</td>
+                                <tr>
+                                    <td align="center"></td>
+                                    <td align="right"><strong>CGST TAX</strong></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="right"></td>
+                                    <td align="center"></td>
+                                    <td align="right" style="border:2px 0 0 0 solid;">100.84</td>
+                                </tr>
+                                <tr>
+                                    <td align="center"></td>
+                                    <td align="right"><strong>SGST TAX</strong></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="right"></td>
+                                    <td align="center"></td>
+                                    <td align="right" style="border:2px 0 0 0 solid;">100.84</td>
+                                </tr>
+                                <tr>
+                                    <td align="center"></td>
+                                    <td align="right">Total</td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="right"></td>
+                                    <td align="center"></td>
+                                    <td align="right" style="border:2px 0 0 0 solid;"><strong>100.84</strong></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Amount Chargeable (in words) <br />
+                            <strong><span>INR </span>@Model.TotalAmountInWords<span> Only</span></strong>
+                        </td>
+                    </tr>
+                    <tr cellpadding='0' cellspacing='0'>
+                        <td colspan="10">
+                            <table width='100%' cellpadding='2' cellspacing='0'>
+                                <tr>
+                                    <td align="center" rowspan="2">HSN/SAC</td>
+                                    <td align="center" rowspan="2">Taxable Value</td>
+                                    <td align="center" colspan="2">Central Tax</td>
+                                    <td align="center" colspan="2">State Tax</td>
+                                    <td align="center" rowspan="2">Total Tax Amount</td>
+                                </tr>
+                                <tr>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                    <td align="center">Rate</td>
+                                    <td align="center">Amount</td>
+                                    <td align="center">Rate</td>
+                                    <td align="center">Amount</td>
+                                    <td align="right"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left">0401</td>
+                                    <td align="right">10,740.00</td>
+                                    <td align="center">0<span>%</span></td>
+                                    <td align="center"></td>
+                                    <td align="center">0<span>%</span></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                </tr>
+                                <tr>
+                                    <td align="left">0401</td>
+                                    <td align="right">10,740.00</td>
+                                    <td align="center">0<span>%</span></td>
+                                    <td align="center"></td>
+                                    <td align="center">0<span>%</span></td>
+                                    <td align="center"></td>
+                                    <td align="center"></td>
+                                </tr>
+                                <tr>
+                                    <td align="right"><strong>Total</strong></td>
+                                    <td align="right"><strong>56,656.00</strong></td>
+                                    <td align="center"></td>
+                                    <td align="right">2655.84</td>
+                                    <td align="center"></td>
+                                    <td align="right">2655.84</td>
+                                    <td align="right">5311.68</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Tax Amount(in words) : <br />
+                            <strong><span>INR </span>Five Thousand Three Hundred Eleven and Sixty Eight paise<span> Only</span></strong>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div width='100%'> <img style='width:660px;text-align:center;height:5px;' src='https://hyperpuredev.blob.core.windows.net/webdata/invoicefooterstrip.png' alt='zomato' /> </div>
+    <div colspan='10' align='center' style='font-size:10px;'>
+        <strong>ZOMATO INTERNET PRIVATE LIMITED</strong>
+        <br />
+        <label><strong>Registered Address:</strong></label> <span>GF 12A, 94 Meghdoot ,Nehru Place, New Delhi 110019</span>
+        <br />
+        <label><strong>CIN:</strong></label><span>U74900DL2015PTC286208</span>
+    </div>
+
+</body>
+</html>
